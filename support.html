@@ -1,0 +1,162 @@
+<!doctype html>
+<!--
+  Focusidea — Support (public hosting page)
+  Self-contained: no external CSS/JS/fonts. Host as-is (e.g. GitHub Pages).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Focusidea — Support / サポート</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1c1c1e; --muted: #6b6b70; --line: #e4e4e8;
+    --accent: #2b6cb0; --card: #f7f7f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16171a; --fg: #e9e9ec; --muted: #9a9aa2; --line: #2c2d31;
+      --accent: #7db4e6; --card: #1e1f23;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7; font-size: 16px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 80px; }
+  header.bar {
+    position: sticky; top: 0; z-index: 10; background: var(--bg);
+    border-bottom: 1px solid var(--line); padding: 10px 20px;
+    display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  }
+  .bar .brand { font-weight: 700; }
+  .bar nav a { color: var(--accent); text-decoration: none; font-size: 14px; margin-left: 14px; }
+  .langtoggle button {
+    font: inherit; font-size: 14px; padding: 5px 12px; margin-left: 6px;
+    border: 1px solid var(--line); background: var(--card); color: var(--fg);
+    border-radius: 999px; cursor: pointer;
+  }
+  .langtoggle button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  h1 { font-size: 1.7rem; line-height: 1.3; margin: 22px 0 6px; }
+  h2 { font-size: 1.2rem; margin: 30px 0 8px; padding-top: 6px; border-top: 1px solid var(--line); }
+  p { margin: 10px 0; }
+  ul { margin: 10px 0; padding-left: 1.3em; }
+  li { margin: 5px 0; }
+  a { color: var(--accent); }
+  .lead { color: var(--muted); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem; }
+  html.js-on .lang { display: none; }
+  html.js-on .lang.active { display: block; }
+  .lang-sep { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+  html.js-on .lang-sep { display: none; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <span class="brand">Focusidea</span>
+  <span class="langtoggle" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+  </span>
+  <nav><a href="privacy.html">Privacy / プライバシー</a></nav>
+</header>
+
+<div class="wrap">
+
+  <!-- ============================ ENGLISH ============================ -->
+  <section class="lang lang-en active" lang="en">
+    <h1>Focusidea Support</h1>
+    <p class="lead">Thank you for using Focusidea.</p>
+
+    <p>For support, privacy questions, or App Store review contact:</p>
+    <p>Email: <a href="mailto:sakusakuPCkobo@aol.com">sakusakuPCkobo@aol.com</a></p>
+
+    <p>When contacting support, please include:</p>
+    <ul>
+      <li>App version.</li>
+      <li>iPhone model.</li>
+      <li>iOS version.</li>
+      <li>A short description of the issue.</li>
+      <li>The feature involved, such as Calendar Holder, Meeting/Lecture, AICompanion, Camera, Beauty, Medication, Labo, Voice, or Settings.</li>
+      <li>Whether the issue happens every time or only sometimes.</li>
+    </ul>
+    <p>Please do not send sensitive medical records, full prescriptions, passwords, authentication codes, payment card information, or private images unless support specifically requests a safe method.</p>
+
+    <h2>Medical And Safety Notice</h2>
+    <p>Focusidea is not a medical device and does not provide diagnosis, treatment, prescriptions, dosage instructions, emergency decisions, or medical acts. In an emergency, contact local emergency services immediately. For health decisions, consult a qualified healthcare professional.</p>
+    <p>Weight Forecast is a reference estimate based on three consecutive days of meal and exercise records and the current weight entered in the user's profile. It is not medical judgment, weight-loss instruction, or treatment guidance.</p>
+
+    <h2>External AI And Provider Costs</h2>
+    <p>Some Focusidea features may connect to external AI providers selected by the user. Provider accounts, subscription plans, token purchases, and external fees are managed by those providers or stores, not by Focusidea support.</p>
+    <p>Focusidea is a monthly subscription app priced at USD 6.99 per month. External AI provider fees are billed to you directly by those providers, are separate from, and are not marked up by, the Focusidea subscription.</p>
+
+    <h2>Permissions</h2>
+    <p>Focusidea may request permissions for camera, photos, microphone, speech recognition, location, notifications, and Face ID/device authentication. Permissions can be changed in the iPhone Settings app.</p>
+  </section>
+
+  <hr class="lang-sep">
+
+  <!-- ============================ 日本語 ============================ -->
+  <section class="lang lang-ja" lang="ja">
+    <h1>Focusidea サポート</h1>
+    <p class="lead">Focusideaをご利用いただきありがとうございます。</p>
+
+    <p>サポート、プライバシーに関するお問い合わせ、App Store審査連絡先:</p>
+    <p>Email: <a href="mailto:sakusakuPCkobo@aol.com">sakusakuPCkobo@aol.com</a></p>
+
+    <p>お問い合わせ時には、可能な範囲で次の情報をお知らせください。</p>
+    <ul>
+      <li>アプリのバージョン。</li>
+      <li>iPhoneの機種。</li>
+      <li>iOSのバージョン。</li>
+      <li>発生している内容の簡単な説明。</li>
+      <li>関係する機能。例: カレンダーホルダー、Meeting/Lecture、AICompanion、カメラ、Beauty、おくすり、Labo、音声、設定。</li>
+      <li>毎回発生するか、ときどき発生するか。</li>
+    </ul>
+    <p>サポート側から安全な方法を指定されない限り、詳細な医療記録、処方箋全体、パスワード、認証コード、支払いカード情報、私的な画像は送信しないでください。</p>
+
+    <h2>医療・安全に関する注意</h2>
+    <p>Focusideaは医療機器ではありません。診断、治療、処方、服薬量の指示、緊急時判断、医療行為を提供しません。緊急時は、直ちに地域の救急サービスへ連絡してください。健康上の判断は、資格を有する医療従事者へ相談してください。</p>
+    <p>体重予測は、連続した3日間の食事記録と運動記録、プロフィールの現在体重をもとにした参考推定です。医療判断、減量指示、治療方針ではありません。</p>
+
+    <h2>外部AIとプロバイダー費用</h2>
+    <p>一部のFocusidea機能は、ユーザーが選択した外部AIプロバイダーへ接続する場合があります。プロバイダーのアカウント、サブスクリプション、トークン購入、外部費用は、当該プロバイダーまたはストアが管理するものであり、Focusideaサポートが管理するものではありません。</p>
+    <p>Focusideaは月額6.99米ドルのサブスクリプションアプリです。外部AIプロバイダー費用は各提供者からユーザーへ直接請求される別料金であり、Focusideaの月額料金には含まれず、上乗せもされません。</p>
+
+    <h2>権限</h2>
+    <p>Focusideaは、カメラ、写真、マイク、音声認識、位置情報、通知、Face ID/端末認証の権限を求める場合があります。権限はiPhoneの設定アプリから変更できます。</p>
+  </section>
+
+  <footer>
+    <p>Focusidea &middot; <a href="privacy.html">Privacy / プライバシー</a></p>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.className += " js-on";
+    var sections = { en: document.querySelector(".lang-en"), ja: document.querySelector(".lang-ja") };
+    var buttons = document.querySelectorAll(".langtoggle button");
+    function setLang(lang) {
+      if (!sections[lang]) lang = "en";
+      for (var k in sections) {
+        if (sections[k]) sections[k].classList.toggle("active", k === lang);
+      }
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false"); });
+      root.setAttribute("lang", lang);
+      try { localStorage.setItem("focusidea_lang", lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem("focusidea_lang"); } catch (e) {}
+    var initial = saved || ((navigator.language || "en").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
+    setLang(initial);
+    buttons.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  })();
+</script>
+</body>
+</html>

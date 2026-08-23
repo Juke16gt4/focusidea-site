@@ -105,7 +105,7 @@
     <p>The app never contacts a third-party AI provider directly, and you are never asked to create an account with an AI provider or to enter an API key. All credentials for these features are held on our server only and are not present in the app.</p>
     <p>On iPhone 15 Pro or later with Apple Intelligence enabled, the Companion replies using Apple's on-device foundation model. Nothing leaves the device.</p>
     <p>On all other supported devices, the request is sent to a gateway operated by us, and the gateway performs the work. This covers conversation with your Companion, Companion image creation and memorial portrait restoration, and the generation of summaries and learning questions.</p>
-    <p><strong>What is sent:</strong> the text of your message, plus an anonymous installation identifier used only to apply per-device usage limits. No name, no contact details, and no health or medical records are sent.</p>
+    <p><strong>What is sent:</strong> the text of your message, plus an anonymous installation identifier used only to apply per-device usage limits. Where a feature needs it, the relevant part of your own records is included so the reply is grounded &mdash; for example lab values and medication names in a health conversation, or your child's age, growth measurements and vaccination status in a maternal and child conversation. Your name, contact details, and precise location are not sent. Your records stay on your device; only the part needed for that request is sent.</p>
     <p><strong>What is retained:</strong> nothing. The gateway does not store conversation text or generated images. Its logs contain only a request identifier and a status code.</p>
     <p>Your personal records, memories, and Companion growth data remain on your device.</p>
     <p>Model providers currently used behind the gateway are Groq (conversation) and Google Gemini (Companion image creation and memorial portrait restoration; image generation runs only when you choose to create or adjust a Companion). We may change or add a model provider behind the gateway without any change to the app. The properties described above are properties of the app and are unaffected by such a change.</p>
@@ -194,7 +194,7 @@
     <p>本アプリが外部AIプロバイダーへ直接接続することはありません。利用者がAIプロバイダーのアカウントを作成したり、APIキーを入力したりすることを求められることもありません。これらの機能の資格情報はすべて当社サーバーにのみ保持され、アプリ内には存在しません。</p>
     <p>iPhone 15 Pro 以降で Apple Intelligence が有効な場合、Companion の返答は Apple のオンデバイス基盤モデルで生成されます。端末から出るものはありません。</p>
     <p>それ以外の対応端末では、リクエストは当社が運用するゲートウェイへ送られ、ゲートウェイが処理を行います。対象は、Companion との会話、Companion 画像の作成と遺影の復元、要約や学習問題の生成です。</p>
-    <p><strong>送信されるもの:</strong> メッセージの本文と、端末単位の利用上限を適用するためだけに用いる匿名のインストール識別子。氏名・連絡先・健康や医療の記録は送信されません。</p>
+    <p><strong>送信されるもの:</strong> メッセージの本文と、端末単位の利用上限を適用するためだけに用いる匿名のインストール識別子。加えて、その相談に必要な範囲で、利用者ご自身の記録が含まれます。たとえば健康の相談では検査値やおくすりの名前、母子手帳の相談ではお子さまの月齢・身長体重・接種の状況などです。氏名・連絡先・正確な位置情報は送信されません。記録そのものは端末内に留まり、その相談に必要な部分だけが送られます。</p>
     <p><strong>保存されるもの:</strong> ありません。ゲートウェイは会話本文も生成画像も保存しません。ログに残るのはリクエスト識別子とステータスコードのみです。</p>
     <p>利用者の個人記録・記憶・Companion の育ちのデータは、端末内に留まります。</p>
     <p>現在ゲートウェイの背後で利用しているモデル提供者は、Groq（会話）と Google Gemini（Companion 画像の作成・遺影の復元。画像生成は、利用者が Companion を作成または調整するときにのみ動作します）です。当社はアプリを変更することなく、ゲートウェイ背後のモデル提供者を変更・追加する場合があります。上記の性質はアプリ自身の性質であり、その変更の影響を受けません。</p>

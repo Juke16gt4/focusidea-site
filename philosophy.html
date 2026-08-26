@@ -1,0 +1,270 @@
+<!doctype html>
+<!--
+  Focusidea — Philosophy / 私たちの考え (public hosting page)
+  Self-contained: no external CSS/JS/fonts. Host as-is (e.g. GitHub Pages).
+  非医療線: 診断・治療・医療機器としての主張を書かないこと。効能の断定を足さない。
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Focusidea grows intelligence, not habits. Think better, understand deeper, grow smarter.">
+<title>Focusidea — Philosophy / 私たちの考え</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1c1c1e; --muted: #6b6b70; --line: #e4e4e8;
+    --accent: #2b6cb0; --card: #f7f7f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16171a; --fg: #e9e9ec; --muted: #9a9aa2; --line: #2c2d31;
+      --accent: #7db4e6; --card: #1e1f23;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.8; font-size: 16px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 80px; }
+  header.bar {
+    position: sticky; top: 0; z-index: 10; background: var(--bg);
+    border-bottom: 1px solid var(--line); padding: 10px 20px;
+    display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  }
+  .bar .brand { font-weight: 700; }
+  .bar .brand a { color: inherit; text-decoration: none; }
+  .bar nav a { color: var(--accent); text-decoration: none; font-size: 14px; margin-left: 14px; }
+  .langtoggle button {
+    font: inherit; font-size: 14px; padding: 5px 12px; margin-left: 6px;
+    border: 1px solid var(--line); background: var(--card); color: var(--fg);
+    border-radius: 999px; cursor: pointer;
+  }
+  .langtoggle button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  h1 { font-size: 1.9rem; line-height: 1.35; margin: 26px 0 8px; }
+  h2 { font-size: 1.2rem; margin: 34px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+  p { margin: 12px 0; }
+  ul { margin: 12px 0; padding-left: 1.3em; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); }
+  .lead { color: var(--muted); font-size: 1.02rem; margin-bottom: 26px; }
+  blockquote {
+    margin: 22px 0; padding: 16px 20px; background: var(--card);
+    border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0;
+    font-size: 1.06rem; line-height: 1.75;
+  }
+  blockquote p { margin: 6px 0; }
+  .loops { display: flex; flex-wrap: wrap; gap: 14px; margin: 18px 0 6px; }
+  .loop {
+    flex: 1 1 260px; min-width: 0; padding: 16px 18px;
+    border: 1px solid var(--line); border-radius: 12px; background: var(--card);
+  }
+  .loop.ours { border-color: var(--accent); }
+  .loop h3 { margin: 0 0 10px; font-size: 0.95rem; color: var(--muted); font-weight: 600; letter-spacing: .02em; }
+  .loop ol { margin: 0; padding: 0; list-style: none; }
+  .loop li { margin: 0; padding: 3px 0 3px 18px; position: relative; font-size: 0.95rem; }
+  .loop li::before {
+    content: "↓"; position: absolute; left: 0; top: 3px; color: var(--muted); font-size: 0.85rem;
+  }
+  .loop li:first-child::before { content: "•"; }
+  .loop.ours li:last-child { font-weight: 700; color: var(--accent); }
+  .layers { margin: 14px 0; padding: 0; list-style: none; }
+  .layers li { padding: 8px 0 8px 26px; position: relative; border-bottom: 1px solid var(--line); }
+  .layers li:last-child { border-bottom: 0; }
+  .layers li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+  .note {
+    margin: 22px 0 0; padding: 14px 16px; border: 1px solid var(--line);
+    border-radius: 10px; color: var(--muted); font-size: 0.92rem;
+  }
+  .mission { text-align: center; margin: 30px 0 6px; font-size: 1.25rem; font-weight: 700; line-height: 1.6; }
+  .mission-sub { text-align: center; color: var(--muted); margin: 0; }
+  footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem; }
+  html.js-on .lang { display: none; }
+  html.js-on .lang.active { display: block; }
+  .lang-sep { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+  html.js-on .lang-sep { display: none; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <span class="brand"><a href="index.html">Focusidea</a></span>
+  <span class="langtoggle" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+  </span>
+  <nav><a href="support.html">Support / サポート</a></nav>
+</header>
+
+<div class="wrap">
+
+  <!-- ============================ ENGLISH ============================ -->
+  <section class="lang lang-en active" lang="en">
+    <h1>We do not teach knowledge.<br>We grow intelligence.</h1>
+    <p class="lead">Think Better. Understand Deeper. Grow Smarter.</p>
+
+    <blockquote>
+      <p>People do not change their behavior because of knowledge.<br>
+      They change because of understanding.</p>
+    </blockquote>
+
+    <h2>What we are actually growing</h2>
+    <p>Most apps in health and in study are built to prompt an action: do this, log that, repeat it until it becomes a habit. Focusidea is built for something further upstream — the intelligence that makes the action obvious to you, in your own words, for your own reasons.</p>
+    <p>Once that intelligence is there, the habit does not have to be pushed. It follows.</p>
+
+    <h2>Health Intelligence</h2>
+    <p>Showing results alone rarely changes anyone. Blood glucose is high. HbA1c is worse. Weight is up. Every one of those tells you <em>what</em> happened, and nothing about <em>why</em> it happened — and it is the "why" that a person can act on.</p>
+    <p>What actually moves people is understanding, accumulated in layers:</p>
+    <ul class="layers">
+      <li>The knowledge to prevent.</li>
+      <li>The knowledge to slow what has already begun.</li>
+      <li>The knowledge to interpret your own condition.</li>
+      <li>The knowledge to see what is likely to come next.</li>
+      <li>The judgment to choose.</li>
+    </ul>
+    <p>When those accumulate, people begin to change on their own — not because they were told to, but because the reasoning has become theirs. That is what we mean by health intelligence: something beyond health literacy, closer to being able to think about your own body.</p>
+    <div class="note">
+      <p>Focusidea is not a medical app and not a medical device. It does not diagnose, treat, or replace your doctor, pharmacist, or any other professional. It supports your understanding; the decisions and the care remain between you and your care team.</p>
+    </div>
+
+    <h2>Learning Intelligence</h2>
+    <p>Focusidea is not a study-help app, and it is not a summarizing AI. The usual loop ends where ours begins.</p>
+    <div class="loops">
+      <div class="loop">
+        <h3>The usual loop</h3>
+        <ol>
+          <li>Lecture</li>
+          <li>Summary</li>
+          <li>Memorize</li>
+          <li>Test</li>
+        </ol>
+      </div>
+      <div class="loop ours">
+        <h3>The Focusidea loop</h3>
+        <ol>
+          <li>Lecture</li>
+          <li>Summary</li>
+          <li>True / false question</li>
+          <li>Why did you choose that answer?</li>
+          <li>Put your own reading into words</li>
+          <li>See the misreading, and the habit of thought behind it</li>
+          <li>Correct the understanding</li>
+          <li>Intelligence grows</li>
+        </ol>
+      </div>
+    </div>
+    <p>Answering correctly is not the goal. The goal is to become aware of why you answered as you did, how you interpreted it, and which piece of knowledge you connected it to. In educational terms, that is metacognition — the ability to observe your own thinking.</p>
+    <p>The gap between a strong student and everyone else is usually not the amount they know. It is how accurately they know what they understand and what they have misunderstood.</p>
+    <p>So our promise is not "we will summarize your lecture." It is: <strong>we make your understanding visible, help you find the habits in your own thinking, and grow the intelligence underneath.</strong></p>
+
+    <h2>Where this comes from</h2>
+    <p>Focusidea began with years of watching the same thing happen from the pharmacy counter and the diabetes education room: people getting worse not because the knowledge did not exist, but because it never reached them in a form they could use.</p>
+    <p>Health and study look like different problems. They are the same one. Both are solved by understanding, and both are solved by the same design.</p>
+
+    <h2>Our mission</h2>
+    <p class="mission">Grow intelligence.<br>Multiply the people who can make a better choice.</p>
+    <p class="mission-sub">Think Better. Understand Deeper. Grow Smarter.</p>
+  </section>
+
+  <hr class="lang-sep">
+
+  <!-- ============================ 日本語 ============================ -->
+  <section class="lang lang-ja" lang="ja">
+    <h1>知識を教えるのではない。<br>知性を育てる。</h1>
+    <p class="lead">より深く考え、より深く理解し、より賢く成長する。</p>
+
+    <blockquote>
+      <p>人は知識によって行動を変えるのではない。<br>
+      理解によって行動を変える。</p>
+    </blockquote>
+
+    <h2>私たちが本当に育てたいもの</h2>
+    <p>健康のアプリも、学習のアプリも、たいていは「行動を促す」ためにつくられています。これをやりましょう、記録しましょう、続けて習慣にしましょう、と。Focusidea が向き合っているのは、その一段上流です。ご自分の言葉で、ご自分の理由で、その行動が当たり前に思えるようになる——そのための知性です。</p>
+    <p>知性が育てば、習慣は押し出さなくてもついてきます。</p>
+
+    <h2>健康知性（Health Intelligence）</h2>
+    <p>結果だけを示しても、人はなかなか変わりません。血糖値が高い。HbA1c が悪い。体重が増えた。どれも「何が起きたか」を告げるだけで、「なぜそうなったのか」は語りません。そして人が動かせるのは、後者のほうです。</p>
+    <p>本当に人を変えるのは、積み上がった理解です。</p>
+    <ul class="layers">
+      <li>予防する知識。</li>
+      <li>すでに始まったものの進展を遅らせる知識。</li>
+      <li>自分の状態を解釈する知識。</li>
+      <li>この先に起こりそうなことを予測する知識。</li>
+      <li>そして、判断する知性。</li>
+    </ul>
+    <p>これらが積み上がると、人は自律的に行動を変え始めます。言われたからではなく、その理屈が自分のものになったからです。私たちが健康知性と呼んでいるのは、健康リテラシーのさらに先——自分のからだについて自分で考えられる状態のことです。</p>
+    <div class="note">
+      <p>Focusidea は医療アプリでも医療機器でもありません。診断や治療を行うものではなく、医師・薬剤師をはじめとする専門職に代わるものでもありません。支えるのは理解であり、判断と医療そのものは、ご本人と医療チームの手に残ります。</p>
+    </div>
+
+    <h2>学習知性（Learning Intelligence）</h2>
+    <p>Focusidea は「学習支援アプリ」ではありません。「要約AI」でもありません。一般的な流れが終わるところから、私たちの流れが始まります。</p>
+    <div class="loops">
+      <div class="loop">
+        <h3>一般的な流れ</h3>
+        <ol>
+          <li>講義</li>
+          <li>要約</li>
+          <li>暗記</li>
+          <li>テスト</li>
+        </ol>
+      </div>
+      <div class="loop ours">
+        <h3>Focusidea の流れ</h3>
+        <ol>
+          <li>講義</li>
+          <li>要約</li>
+          <li>〇×問題</li>
+          <li>なぜその答えを選んだのか</li>
+          <li>自分の解釈を言語化する</li>
+          <li>誤解と、その奥にある思考の癖に気づく</li>
+          <li>理解を修正する</li>
+          <li>知性が育つ</li>
+        </ol>
+      </div>
+    </div>
+    <p>正解することが目的ではありません。なぜ誤答したのか、なぜそのように解釈したのか、どの知識と結び付けたのかを、本人が自覚することが目的です。教育学の言葉でいえば、これは学習ではなくメタ認知——自分の思考を観察する力を育てています。</p>
+    <p>優秀な学生とそうでない学生の差は、知識量ではないことがほとんどです。自分が何を理解していて、何を誤解しているのかを、どれだけ正確に認識できているか。その差です。</p>
+    <p>ですから私たちがお約束するのは「講義を要約します」ではありません。<strong>理解度を可視化し、あなた自身の思考の癖を発見し、その下にある知性を育てます。</strong></p>
+
+    <h2>この思想の出どころ</h2>
+    <p>Focusidea は、薬局のカウンターと糖尿病の療養指導の場で、同じ光景を何年も見てきたところから始まりました。知識がなかったから悪くなったのではなく、使える形で届かなかったから悪くなっていった——そういう方たちを減らしたい、という願いです。</p>
+    <p>健康と学習は別の問題に見えます。同じ問題です。どちらも理解によって解け、どちらも同じ設計で解けます。</p>
+
+    <h2>私たちの使命</h2>
+    <p class="mission">知性を育み、<br>より良い選択ができる人を増やす。</p>
+    <p class="mission-sub">より深く考え、より深く理解し、より賢く成長する。</p>
+  </section>
+
+  <footer>
+    <p>Focusidea &middot; <a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy / プライバシー</a> &middot; <a href="terms.html">Terms / 利用規約</a> &middot; <a href="support.html">Support / サポート</a></p>
+    <p>Not a medical device. / 医療機器ではありません。</p>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.className += " js-on";
+    var sections = { en: document.querySelector(".lang-en"), ja: document.querySelector(".lang-ja") };
+    var buttons = document.querySelectorAll(".langtoggle button");
+    function setLang(lang) {
+      if (!sections[lang]) lang = "en";
+      for (var k in sections) {
+        if (sections[k]) sections[k].classList.toggle("active", k === lang);
+      }
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false"); });
+      root.setAttribute("lang", lang);
+      try { localStorage.setItem("focusidea_lang", lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem("focusidea_lang"); } catch (e) {}
+    var initial = saved || ((navigator.language || "en").toLowerCase().indexOf("ja") === 0 ? "ja" : "en");
+    setLang(initial);
+    buttons.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  })();
+</script>
+</body>
+</html>

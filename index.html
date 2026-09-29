@@ -18,6 +18,13 @@
     line-height:1.7;
   }
   .card { max-width:520px; width:calc(100% - 40px); padding:32px 28px; text-align:center; }
+  .langtoggle { display:flex; justify-content:center; flex-wrap:wrap; gap:6px; margin-bottom:22px; }
+  .langtoggle button {
+    font: inherit; font-size: 13px; padding: 5px 12px;
+    border: 1px solid var(--line); background: var(--card); color: var(--fg);
+    border-radius: 999px; cursor: pointer;
+  }
+  .langtoggle button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
   h1 { font-size:2rem; margin:0 0 6px; }
   p.tag { color:var(--muted); margin:0 0 28px; }
   .links { display:flex; flex-direction:column; gap:12px; }
@@ -27,19 +34,113 @@
   }
   a.btn:hover { border-color:var(--accent); color:var(--accent); }
   footer { margin-top:28px; color:var(--muted); font-size:0.85rem; }
+  html.js-on .lang { display: none; }
+  html.js-on .lang.active { display: block; }
+  .lang-sep { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+  html.js-on .lang-sep { display: none; }
 </style>
 </head>
 <body>
   <main class="card">
-    <h1>Focusidea</h1>
-    <p class="tag">Personal Intelligence Support / 知的パーソナルサポート</p>
-    <div class="links">
-      <a class="btn" href="philosophy.html">Philosophy / 私たちの考え</a>
-      <a class="btn" href="privacy.html">Privacy Policy / プライバシーポリシー</a>
-      <a class="btn" href="terms.html">Terms of Use / 利用規約</a>
-      <a class="btn" href="support.html">Support / サポート</a>
+    <span class="langtoggle" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+      <button type="button" data-lang="hi" aria-pressed="false">हिन्दी</button>
+      <button type="button" data-lang="fr" aria-pressed="false">Français</button>
+      <button type="button" data-lang="de" aria-pressed="false">Deutsch</button>
+    </span>
+
+    <div class="lang lang-en active" lang="en">
+      <h1>Focusidea</h1>
+      <p class="tag">Personal Intelligence Support</p>
+      <div class="links">
+        <a class="btn" href="philosophy.html">Philosophy</a>
+        <a class="btn" href="privacy.html">Privacy Policy</a>
+        <a class="btn" href="terms.html">Terms of Use</a>
+        <a class="btn" href="support.html">Support</a>
+      </div>
+      <footer>Not a medical device.</footer>
     </div>
-    <footer>Not a medical device. / 医療機器ではありません。</footer>
+
+    <hr class="lang-sep">
+
+    <div class="lang lang-ja" lang="ja">
+      <h1>Focusidea</h1>
+      <p class="tag">知的パーソナルサポート</p>
+      <div class="links">
+        <a class="btn" href="philosophy.html">私たちの考え</a>
+        <a class="btn" href="privacy.html">プライバシーポリシー</a>
+        <a class="btn" href="terms.html">利用規約</a>
+        <a class="btn" href="support.html">サポート</a>
+      </div>
+      <footer>医療機器ではありません。</footer>
+    </div>
+
+    <hr class="lang-sep">
+
+    <div class="lang lang-hi" lang="hi">
+      <h1>Focusidea</h1>
+      <p class="tag">Personal Intelligence Support</p>
+      <div class="links">
+        <a class="btn" href="philosophy.html">दर्शन</a>
+        <a class="btn" href="privacy.html">गोपनीयता नीति</a>
+        <a class="btn" href="terms.html">उपयोग की शर्तें</a>
+        <a class="btn" href="support.html">सहायता</a>
+      </div>
+      <footer>यह चिकित्सा उपकरण नहीं है।</footer>
+    </div>
+
+    <hr class="lang-sep">
+
+    <div class="lang lang-fr" lang="fr">
+      <h1>Focusidea</h1>
+      <p class="tag">Assistance personnelle intelligente</p>
+      <div class="links">
+        <a class="btn" href="philosophy.html">Philosophie</a>
+        <a class="btn" href="privacy.html">Politique de confidentialité</a>
+        <a class="btn" href="terms.html">Conditions d'utilisation</a>
+        <a class="btn" href="support.html">Assistance</a>
+      </div>
+      <footer>Ce n'est pas un dispositif médical.</footer>
+    </div>
+
+    <hr class="lang-sep">
+
+    <div class="lang lang-de" lang="de">
+      <h1>Focusidea</h1>
+      <p class="tag">Intelligente persönliche Assistenz</p>
+      <div class="links">
+        <a class="btn" href="philosophy.html">Philosophie</a>
+        <a class="btn" href="privacy.html">Datenschutzerklärung</a>
+        <a class="btn" href="terms.html">Nutzungsbedingungen</a>
+        <a class="btn" href="support.html">Support</a>
+      </div>
+      <footer>Kein Medizinprodukt.</footer>
+    </div>
   </main>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.className += " js-on";
+    var sections = { en: document.querySelector(".lang-en"), ja: document.querySelector(".lang-ja"), hi: document.querySelector(".lang-hi"), fr: document.querySelector(".lang-fr"), de: document.querySelector(".lang-de") };
+    var buttons = document.querySelectorAll(".langtoggle button");
+    function setLang(lang) {
+      if (!sections[lang]) lang = "en";
+      for (var k in sections) {
+        if (sections[k]) sections[k].classList.toggle("active", k === lang);
+      }
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false"); });
+      root.setAttribute("lang", lang);
+      try { localStorage.setItem("focusidea_lang", lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem("focusidea_lang"); } catch (e) {}
+    var nl = (navigator.language || "en").toLowerCase();
+    var initial = saved || (nl.indexOf("ja") === 0 ? "ja" : (nl.indexOf("hi") === 0 ? "hi" : (nl.indexOf("fr") === 0 ? "fr" : (nl.indexOf("de") === 0 ? "de" : "en"))));
+    setLang(initial);
+    buttons.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  })();
+</script>
 </body>
 </html>

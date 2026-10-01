@@ -101,10 +101,14 @@ final class SubscriptionStore: ObservableObject {
     }
 }
 
+/// 遷移先。アプリ側のルーティングに合わせて処理を割り当てる。
+enum PaywallDestination { case mainBoard, trialCompanion }
+
 struct PaywallView: View {
     @ObservedObject var store: SubscriptionStore
-    var onContinueFree: () -> Void            // 「無料機能のみ利用」: 行き止まりにしない
+    var onSelect: (PaywallDestination) -> Void   // 行き先を選んだら呼ばれる(行き止まりにしない)
     @Environment(\.openURL) private var openURL
+    @State private var showDestinationDialog = false
 
     private var price: String {
         if case .ready(let p) = store.loadState { return p.displayPrice }
@@ -134,7 +138,7 @@ struct PaywallView: View {
                 }
 
                 Button("購入を復元") { Task { await store.restore() } }.disabled(store.isWorking)
-                Button(TrialManager.isActive ? "お試しを続ける" : "無料機能のみ利用", action: onContinueFree)
+                Button(TrialManager.isActive ? "お試しを続ける" : "無料機能のみ利用") { showDestinationDialog = true }
                     .foregroundStyle(.secondary)
 
                 Text("購入すると、利用規約とプライバシーポリシーに同意したことになります。")
@@ -145,7 +149,12 @@ struct PaywallView: View {
                 }.font(.caption)
             }.padding()
         }
-        .onChange(of: store.isSubscribed) { if $0 { onContinueFree() } }   // 成功→画面を閉じる
+        .confirmationDialog("移動先を選んでください", isPresented: $showDestinationDialog, titleVisibility: .visible) {
+            Button("MainBoard へ") { onSelect(.mainBoard) }
+            Button("TrialCompanion 選択へ") { onSelect(.trialCompanion) }
+            Button("キャンセル", role: .cancel) {}
+        }
+        .onChange(of: store.isSubscribed) { if $0 { onSelect(.mainBoard) } }   // 購入成功→MainBoardへ
     }
 
     @ViewBuilder private var content: some View {

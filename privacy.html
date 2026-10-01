@@ -73,7 +73,7 @@
   <!-- ============================ ENGLISH ============================ -->
   <section class="lang lang-en active" lang="en">
     <h1>Focusidea Privacy Policy</h1>
-    <p class="updated">Last updated: September 29, 2026</p>
+    <p class="updated">Last updated: October 1, 2026</p>
 
     <p>Focusidea is a global Personal Intelligence Support app for iPhone. It is designed to help users organize daily records, conversations, companion interactions, schedules, photos, Meeting/Lecture notes, nutrition and exercise logs, Weight Forecast reference information, and optional health-related personal records.</p>
     <p>Focusidea is not a medical device. Focusidea does not provide diagnosis, treatment decisions, prescriptions, drug dosage instructions, emergency decisions, or medical acts. Health-related features are intended for personal record keeping, self-understanding, and consultation preparation. Always consult a qualified healthcare professional before making medical decisions.</p>
@@ -102,6 +102,7 @@
       <li>Help users understand their own records and prepare better questions for professionals.</li>
       <li>Estimate a 30-day weight trend from three consecutive days of meal and exercise records when the user chooses the Weight Forecast feature.</li>
       <li>Improve app reliability through internal diagnostics where enabled.</li>
+      <li>Where you (or, for users under 18, your parent or guardian) have agreed, assess whether the lessons help users understand the material (see “Learning Analytics (Optional)”).</li>
     </ul>
 
     <h2>AI Processing And Our Gateway</h2>
@@ -109,10 +110,18 @@
     <p>On iPhone 15 Pro or later with Apple Intelligence enabled, the Companion replies using Apple's on-device foundation model. Nothing leaves the device.</p>
     <p>On all other supported devices, the request is sent to a gateway operated by us, and the gateway performs the work. This covers conversation with your Companion, Companion image creation and memorial portrait restoration, and the generation of summaries and learning questions.</p>
     <p><strong>What is sent:</strong> the text of your message, plus an anonymous installation identifier used only to apply per-device usage limits. Where a feature needs it, the relevant part of your own records is included so the reply is grounded &mdash; for example lab values and medication names in a health conversation, or your child's age, growth measurements and vaccination status in a maternal and child conversation. Your name, contact details, and precise location are not sent. Your records stay on your device; only the part needed for that request is sent.</p>
-    <p><strong>What is retained:</strong> nothing. The gateway does not store conversation text or generated images. Its logs contain only a request identifier and a status code.</p>
+    <p><strong>What is retained:</strong> nothing. The gateway does not store conversation text or generated images. Its logs contain only a request identifier and a status code. This describes AI requests; the optional learning analytics are separate and are described in “Learning Analytics (Optional)” below.</p>
     <p>Your personal records, memories, and Companion growth data remain on your device.</p>
     <p>Model providers currently used behind the gateway are Groq (conversation) and Google Gemini (Companion image creation and memorial portrait restoration; image generation runs only when you choose to create or adjust a Companion). We may change or add a model provider behind the gateway without any change to the app. The properties described above are properties of the app and are unaffected by such a change.</p>
     <p>Focusidea's monthly subscription is the only charge. No AI provider bills you, because you hold no account with any of them.</p>
+
+    <h2>Learning Analytics (Optional)</h2>
+    <p><strong>Purpose:</strong> to judge whether the lessons are helping users understand the material. The data is not used for advertising, is not sold, and is not shared with third parties.</p>
+    <p><strong>What is sent:</strong> an anonymous installation identifier, and information about lesson use and understanding (for example which lessons were used, when and for how long, and results that indicate comprehension). It does not include your name, email address, contact details, location, conversation text, photos, or health records.</p>
+    <p><strong>Consent:</strong> this is sent only with the agreement of the user or, for users under 18, of a parent or guardian. Focusidea works without it, and the agreement can be withdrawn at any time.</p>
+    <p><strong>Where it is stored:</strong> on a private server operated by us. It is transmitted over an encrypted (HTTPS) connection with an authentication token, and we do not store it with any third-party analytics service.</p>
+    <p><strong>How long it is kept:</strong> for up to 12 months from collection, after which it is deleted.</p>
+    <p><strong>Deletion requests:</strong> a user or a parent or guardian may ask us to delete this data by emailing the address under “Contact”. Because the data is tied to an anonymous identifier rather than a name, we may ask for information needed to identify the installation.</p>
 
     <h2>Face ID And Device Authentication</h2>
     <p>When Face ID or device authentication is used, biometric matching is handled by iOS on the user's device. Focusidea does not receive, store, or transmit Face ID biometric data.</p>
@@ -144,11 +153,11 @@
     <p>Speech recognition uses Apple's Speech framework. Depending on iOS and your device, recognition may run on the device or use Apple's speech-recognition service. As a last-resort fallback when both of those fail, the app may send the audio to a private speech-recognition server operated by the developer; this server is reachable only from the developer's own private network and cannot be reached by other users. Outside of this narrow fallback, Focusidea does not upload your voice recordings to any Focusidea server. Meeting/Lecture audio is recorded and stored locally on your device; you can delete these recordings in the app. If an optional cloud voice is used for the companion's spoken replies, only the text to be spoken is sent to that voice service — never a recording of your voice.</p>
 
     <h2>Tracking And Advertising</h2>
-    <p>Focusidea does not use third-party advertising and does not use cross-app or cross-site tracking for advertising purposes.</p>
+    <p>Focusidea does not use third-party advertising and does not use cross-app or cross-site tracking for advertising purposes. The optional learning analytics are not used for advertising or tracking across apps or sites.</p>
 
     <h2>Data Storage And Retention</h2>
     <p>Focusidea is designed to keep personal records organized locally and through Calendar Holder links unless the user chooses export, sharing, or an AI feature that is processed through our gateway.</p>
-    <p>App-local data remains on the device until it is removed through available in-app controls, exported and deleted by the user, or removed by uninstalling the app. Requests sent through our gateway are not stored by it (see “AI Processing And Our Gateway”).</p>
+    <p>App-local data remains on the device until it is removed through available in-app controls, exported and deleted by the user, or removed by uninstalling the app. Requests sent through our gateway are not stored by it (see “AI Processing And Our Gateway”). Optional learning-analytics data is kept for up to 12 months (see “Learning Analytics (Optional)”).</p>
     <p>For selected important on-device records, such as the profile, Focusidea Safe Record Guard creates SHA-256 fingerprints at save time, can keep local recovery snapshots, and checks integrity at load time. If a fingerprint does not match, Focusidea can detect possible corruption or tampering and quarantine suspicious data. This process is performed on device and is not designed for advertising tracking or external analytics transmission. It is not antivirus protection, complete unauthorized-access prevention, identity verification, an encryption guarantee, or a medical safety guarantee.</p>
 
     <h2>Companions (Selectable Appearance) May Change</h2>
@@ -158,7 +167,7 @@
     <p>Focusidea does not sell personal data. Focusidea shares information only when needed to provide a user-selected feature, when the user explicitly chooses export or sharing, when required by law, or when necessary to protect safety and security.</p>
 
     <h2>Children And Young Users</h2>
-    <p>Focusidea is not designed as a Kids Category app. If younger users use Focusidea, a parent or guardian should supervise use, especially features involving personal records, health-related notes, AI-generated content, or purchases.</p>
+    <p>Focusidea is not designed as a Kids Category app. If younger users use Focusidea, a parent or guardian should supervise use, especially features involving personal records, health-related notes, AI-generated content, or purchases. The optional learning analytics are sent for users under 18 only with the consent of a parent or guardian, which can be withdrawn at any time.</p>
 
     <h2>User Choices</h2>
     <p>Users can manage iOS permissions in the Settings app. Users can choose whether to use the camera, photos, speech, microphone, location, and notifications. AI features work without any provider account or key.</p>
@@ -178,7 +187,7 @@
   <!-- ============================ 日本語 ============================ -->
   <section class="lang lang-ja" lang="ja">
     <h1>Focusidea プライバシーポリシー</h1>
-    <p class="updated">最終更新日: 2026年9月29日</p>
+    <p class="updated">最終更新日: 2026年10月1日</p>
 
     <p>Focusideaは、iPhone向けの世界対応型・知的パーソナルサポートアプリです。日々の記録、会話、AICompanionとのやりとり、予定、写真、Meeting/Lecture記録、食事・運動記録、体重予測の参考情報、任意の健康関連の個人記録を整理するために設計されています。</p>
     <p>Focusideaは医療機器ではありません。Focusideaは、診断、治療判断、処方、服薬量の指示、緊急時判断、医療行為を提供しません。健康関連機能は、個人の記録、自己理解、医療従事者へ相談する準備を支援するためのものです。医療上の判断を行う前には、必ず医師、薬剤師、看護師など資格を有する医療従事者へ相談してください。</p>
@@ -207,6 +216,7 @@
       <li>ユーザーが自身の記録に関心を持ち、医療チームの一員として相談や意思疎通に参加しやすくするため。</li>
       <li>ユーザーが体重予測機能を選択した場合、連続した3日間の食事・運動記録から30日後の体重傾向を目安として推定するため。</li>
       <li>有効化されている場合、アプリの安定性確認や内部診断に利用するため。</li>
+      <li>ご本人（18歳未満の場合は保護者）が同意した場合に、授業が利用者の理解に役立っているかを判断するため（「学習理解度の分析（任意）」を参照）。</li>
     </ul>
 
     <h2>AI処理と当社ゲートウェイ</h2>
@@ -214,10 +224,18 @@
     <p>iPhone 15 Pro 以降で Apple Intelligence が有効な場合、Companion の返答は Apple のオンデバイス基盤モデルで生成されます。端末から出るものはありません。</p>
     <p>それ以外の対応端末では、リクエストは当社が運用するゲートウェイへ送られ、ゲートウェイが処理を行います。対象は、Companion との会話、Companion 画像の作成と遺影の復元、要約や学習問題の生成です。</p>
     <p><strong>送信されるもの:</strong> メッセージの本文と、端末単位の利用上限を適用するためだけに用いる匿名のインストール識別子。加えて、その相談に必要な範囲で、利用者ご自身の記録が含まれます。たとえば健康の相談では検査値やおくすりの名前、母子手帳の相談ではお子さまの月齢・身長体重・接種の状況などです。氏名・連絡先・正確な位置情報は送信されません。記録そのものは端末内に留まり、その相談に必要な部分だけが送られます。</p>
-    <p><strong>保存されるもの:</strong> ありません。ゲートウェイは会話本文も生成画像も保存しません。ログに残るのはリクエスト識別子とステータスコードのみです。</p>
+    <p><strong>保存されるもの:</strong> ありません。ゲートウェイは会話本文も生成画像も保存しません。ログに残るのはリクエスト識別子とステータスコードのみです。これはAI機能のリクエストについての記述です。任意の学習理解度の分析は別のもので、下の「学習理解度の分析（任意）」に記載しています。</p>
     <p>利用者の個人記録・記憶・Companion の育ちのデータは、端末内に留まります。</p>
     <p>現在ゲートウェイの背後で利用しているモデル提供者は、Groq（会話）と Google Gemini（Companion 画像の作成・遺影の復元。画像生成は、利用者が Companion を作成または調整するときにのみ動作します）です。当社はアプリを変更することなく、ゲートウェイ背後のモデル提供者を変更・追加する場合があります。上記の性質はアプリ自身の性質であり、その変更の影響を受けません。</p>
     <p>課金は Focusidea の月額サブスクリプションのみです。利用者はどのAIプロバイダーとも契約を持たないため、プロバイダーから請求されることはありません。</p>
+
+    <h2>学習理解度の分析（任意）</h2>
+    <p><strong>目的:</strong> 授業が利用者の理解に役立っているかを判断するためです。広告には使わず、販売せず、第三者へ提供しません。</p>
+    <p><strong>送信されるもの:</strong> 匿名のインストール識別子と、授業の利用状況・理解度に関する情報（たとえば、利用した授業、日時と時間、理解度を示す結果）です。氏名、メールアドレス、連絡先、位置情報、会話の本文、写真、健康記録は含まれません。</p>
+    <p><strong>同意:</strong> 利用者ご本人、18歳未満の場合は保護者の同意がある場合にのみ送信されます。同意しなくてもFocusideaは利用でき、同意はいつでも撤回できます。</p>
+    <p><strong>保存先:</strong> 当社が運用する私設サーバーです。暗号化された通信（HTTPS）と認証トークンを用いて送信し、第三者の分析サービスには保存しません。</p>
+    <p><strong>保持期間:</strong> 収集から最長12か月とし、その後削除します。</p>
+    <p><strong>削除の依頼:</strong> 利用者ご本人または保護者は、「お問い合わせ」のメールアドレスへ連絡することで、このデータの削除を求められます。データは氏名ではなく匿名の識別子に紐づくため、該当のインストールを特定するための情報をお尋ねすることがあります。</p>
 
     <h2>Face IDと端末認証</h2>
     <p>Face IDまたは端末認証を利用する場合、認証処理はユーザーの端末上でiOSにより行われます。FocusideaはFace IDの生体情報を受け取らず、保存せず、送信しません。</p>
@@ -249,11 +267,11 @@
     <p>音声認識にはAppleのSpeechフレームワークを使用します。iOSや端末により、認識は端末内で行われる場合と、Appleの音声認識サービスを利用する場合があります。その両方が失敗した場合の最後の手段として、開発者が運用する私設の音声認識サーバーへ音声を送ることがあります。このサーバーは開発者自身の私設ネットワークからしか到達できず、他の利用者が届かせることはできません。この限られた場合を除き、Focusideaはユーザーの音声録音をFocusideaのサーバーへアップロードすることはありません。Meeting/Lectureの音声は端末内に録音・保存され、アプリ内で削除できます。コンパニオンの読み上げに任意のクラウド音声を使用する場合、送信されるのは読み上げるテキストのみで、ユーザーの音声の録音そのものは送信されません。</p>
 
     <h2>トラッキングと広告</h2>
-    <p>Focusideaは第三者広告を使用せず、広告目的のアプリ横断・サイト横断トラッキングを行いません。</p>
+    <p>Focusideaは第三者広告を使用せず、広告目的のアプリ横断・サイト横断トラッキングを行いません。任意の学習理解度の分析は、広告やアプリ横断・サイト横断の追跡には使いません。</p>
 
     <h2>データの保存と保持</h2>
     <p>Focusideaは、ユーザーがエクスポート、共有、または当社ゲートウェイを経由するAI機能を選択しない限り、個人記録を端末内およびカレンダーホルダーのリンクで整理する設計です。</p>
-    <p>アプリ内に保存されたデータは、アプリ内で利用可能な削除操作、ユーザーによるエクスポート後の削除、またはアプリのアンインストールによって削除されるまで端末内に残ります。ゲートウェイへ送られたリクエストは、ゲートウェイに保存されません（「AI処理と当社ゲートウェイ」を参照）。</p>
+    <p>アプリ内に保存されたデータは、アプリ内で利用可能な削除操作、ユーザーによるエクスポート後の削除、またはアプリのアンインストールによって削除されるまで端末内に残ります。ゲートウェイへ送られたリクエストは、ゲートウェイに保存されません（「AI処理と当社ゲートウェイ」を参照）。任意の学習理解度の分析データは最長12か月保持します（「学習理解度の分析（任意）」を参照）。</p>
     <p>プロフィールなど一部の重要な端末内記録については、Focusidea Safe Record Guardにより、保存時のSHA-256指紋、復元用ローカルスナップショット、読み込み時の整合性確認を行います。指紋が一致しない場合、破損または改ざん疑いとして検出し、疑わしいデータを隔離できるようにします。この処理は端末内で行われ、広告目的の追跡や外部分析を目的とした送信ではありません。また、ウイルス駆除、完全な不正アクセス防止、本人確認、暗号化保証、医療安全性の保証を行うものではありません。</p>
 
     <h2>コンパニオン（選べる見た目）の追加・削除について</h2>
@@ -263,7 +281,7 @@
     <p>Focusideaは個人データを販売しません。情報の共有は、ユーザーが選択した機能の提供に必要な場合、ユーザーが明示的にエクスポートまたは共有を選択した場合、法令上必要な場合、安全性やセキュリティ保護に必要な場合に限ります。</p>
 
     <h2>子ども・若年ユーザー</h2>
-    <p>FocusideaはKids Category向けアプリとして設計されていません。若年ユーザーが利用する場合、特に個人記録、健康関連メモ、AIが生成した内容、購入を伴う機能については、保護者の管理のもとで利用してください。</p>
+    <p>FocusideaはKids Category向けアプリとして設計されていません。若年ユーザーが利用する場合、特に個人記録、健康関連メモ、AIが生成した内容、購入を伴う機能については、保護者の管理のもとで利用してください。任意の学習理解度の分析は、18歳未満の利用者については保護者の同意がある場合にのみ送信され、同意はいつでも撤回できます。</p>
 
     <h2>ユーザーの選択</h2>
     <p>ユーザーはiOSの設定アプリから権限を管理できます。カメラ、写真、音声、マイク、位置情報、通知の利用は、ユーザーが選択できます。AI機能は、プロバイダーのアカウントも鍵も不要で動作します。</p>
@@ -281,7 +299,7 @@
 
   <section class="lang lang-hi" lang="hi">
     <h1>Focusidea गोपनीयता नीति</h1>
-    <p class="updated">अंतिम अद्यतन: 29 सितम्बर 2026</p>
+    <p class="updated">अंतिम अद्यतन: 1 अक्टूबर 2026</p>
 
     <p>Focusidea, iPhone के लिए बना एक वैश्विक Personal Intelligence Support ऐप है। यह उपयोगकर्ताओं को रोज़ के रिकॉर्ड, बातचीत, Companion से मेल-जोल, कार्यक्रम, तस्वीरें, Meeting/Lecture के नोट, पोषण और व्यायाम के लेखे, Weight Forecast की संदर्भ जानकारी, तथा वैकल्पिक रूप से सेहत से जुड़े निजी रिकॉर्ड व्यवस्थित करने में मदद करने के लिए बना है।</p>
     <p>Focusidea कोई चिकित्सा उपकरण नहीं है। यह निदान, इलाज के निर्णय, पर्ची, दवा की ख़ुराक के निर्देश, आपात निर्णय या कोई चिकित्सकीय कार्य नहीं करता। सेहत से जुड़ी सुविधाएँ निजी रिकॉर्ड रखने, ख़ुद को समझने और परामर्श की तैयारी के लिए हैं। चिकित्सा से जुड़े निर्णय लेने से पहले हमेशा किसी योग्य स्वास्थ्य पेशेवर से सलाह लें।</p>
@@ -310,6 +328,7 @@
       <li>उपयोगकर्ताओं को अपने रिकॉर्ड समझने और पेशेवरों के लिए बेहतर सवाल तैयार करने में मदद करना।</li>
       <li>जब उपयोगकर्ता Weight Forecast सुविधा चुनता है, तब लगातार तीन दिनों के भोजन और व्यायाम के रिकॉर्ड से 30 दिन के वज़न के रुझान का अनुमान लगाना।</li>
       <li>जहाँ चालू हो, वहाँ आंतरिक निदान के ज़रिए ऐप की विश्वसनीयता सुधारना।</li>
+      <li>जहाँ आपने (या 18 वर्ष से कम आयु होने पर आपके माता-पिता/अभिभावक ने) सहमति दी हो, वहाँ यह आँकना कि पाठ उपयोगकर्ताओं को सामग्री समझने में मदद करते हैं या नहीं (देखें “सीखने की समझ का विश्लेषण (वैकल्पिक)”)।</li>
     </ul>
 
     <h2>AI प्रसंस्करण और हमारा गेटवे</h2>
@@ -317,10 +336,18 @@
     <p>iPhone 15 Pro या उसके बाद के मॉडल पर, Apple Intelligence चालू होने पर, Companion का जवाब Apple के ऑन-डिवाइस फ़ाउंडेशन मॉडल से बनता है। कुछ भी डिवाइस से बाहर नहीं जाता।</p>
     <p>बाक़ी सभी सक्षम डिवाइस पर अनुरोध हमारे संचालित गेटवे को भेजा जाता है, और वही काम करता है। इसमें आपके Companion से बातचीत, Companion की छवि बनाना और स्मृति-चित्र की बहाली, तथा सारांश और पढ़ाई के सवाल तैयार करना शामिल है।</p>
     <p><strong>क्या भेजा जाता है:</strong> आपके संदेश का पाठ, और एक अनाम इंस्टॉलेशन पहचानक, जो केवल प्रति-डिवाइस उपयोग सीमा लागू करने के लिए इस्तेमाल होता है। जहाँ किसी सुविधा को ज़रूरत हो, वहाँ जवाब को आधार देने के लिए आपके ही रिकॉर्ड का सम्बन्धित हिस्सा शामिल किया जाता है &mdash; जैसे सेहत की बातचीत में जाँच के मान और दवाओं के नाम, या मातृ-शिशु बातचीत में आपके बच्चे की उम्र, बढ़त के माप और टीकाकरण की स्थिति। आपका नाम, संपर्क जानकारी और सटीक स्थान नहीं भेजे जाते। आपके रिकॉर्ड आपके डिवाइस पर ही रहते हैं; उसी अनुरोध के लिए ज़रूरी हिस्सा ही भेजा जाता है।</p>
-    <p><strong>क्या रखा जाता है:</strong> कुछ भी नहीं। गेटवे न बातचीत का पाठ रखता है, न बनाई गई छवियाँ। उसके लॉग में केवल एक अनुरोध पहचानक और स्थिति कोड होता है।</p>
+    <p><strong>क्या रखा जाता है:</strong> कुछ भी नहीं। गेटवे न बातचीत का पाठ रखता है, न बनाई गई छवियाँ। उसके लॉग में केवल एक अनुरोध पहचानक और स्थिति कोड होता है। यह AI अनुरोधों के बारे में है; वैकल्पिक सीखने का विश्लेषण अलग है और नीचे “सीखने की समझ का विश्लेषण (वैकल्पिक)” में बताया गया है।</p>
     <p>आपके निजी रिकॉर्ड, यादें और Companion की बढ़त का डेटा आपके डिवाइस पर ही रहता है।</p>
     <p>गेटवे के पीछे इस समय इस्तेमाल होने वाली मॉडल कंपनियाँ हैं: Groq (बातचीत) और Google Gemini (Companion की छवि बनाना और स्मृति-चित्र की बहाली; छवि बनाना केवल तब चलता है जब आप Companion बनाना या बदलना चुनते हैं)। हम ऐप में कोई बदलाव किए बिना गेटवे के पीछे की मॉडल कंपनी बदल सकते हैं या जोड़ सकते हैं। ऊपर बताई गई बातें ऐप की विशेषताएँ हैं और ऐसे बदलाव से अप्रभावित रहती हैं।</p>
     <p>शुल्क सिर्फ़ Focusidea की मासिक सदस्यता का है। कोई AI कंपनी आपसे शुल्क नहीं लेती, क्योंकि उनमें से किसी में आपका खाता ही नहीं है।</p>
+
+    <h2>सीखने की समझ का विश्लेषण (वैकल्पिक)</h2>
+    <p><strong>उद्देश्य:</strong> यह आँकना कि पाठ उपयोगकर्ताओं को सामग्री समझने में मदद कर रहे हैं या नहीं। इस डेटा का उपयोग विज्ञापन के लिए नहीं होता, इसे बेचा नहीं जाता और तीसरे पक्ष से साझा नहीं किया जाता।</p>
+    <p><strong>क्या भेजा जाता है:</strong> एक अनाम इंस्टॉलेशन पहचानक, और पाठों के उपयोग तथा समझ से जुड़ी जानकारी (जैसे कौन-से पाठ इस्तेमाल हुए, कब और कितनी देर, और समझ दर्शाने वाले परिणाम)। इसमें आपका नाम, ईमेल पता, संपर्क विवरण, स्थान, बातचीत का पाठ, तस्वीरें या सेहत के रिकॉर्ड शामिल नहीं हैं।</p>
+    <p><strong>सहमति:</strong> यह केवल उपयोगकर्ता की, या 18 वर्ष से कम आयु होने पर माता-पिता/अभिभावक की, सहमति से भेजा जाता है। इसके बिना भी Focusidea काम करता है, और सहमति किसी भी समय वापस ली जा सकती है।</p>
+    <p><strong>कहाँ रखा जाता है:</strong> हमारे संचालित निजी सर्वर पर। इसे एन्क्रिप्टेड (HTTPS) कनेक्शन और प्रमाणीकरण टोकन के साथ भेजा जाता है, और हम इसे किसी तीसरे पक्ष की एनालिटिक्स सेवा में नहीं रखते।</p>
+    <p><strong>कितने समय रखा जाता है:</strong> संग्रह से अधिकतम 12 महीने, उसके बाद इसे हटा दिया जाता है।</p>
+    <p><strong>हटाने का अनुरोध:</strong> उपयोगकर्ता या माता-पिता/अभिभावक “संपर्क” में दिए पते पर ईमेल करके यह डेटा हटाने को कह सकते हैं। चूँकि डेटा नाम से नहीं बल्कि अनाम पहचानक से जुड़ा है, हम संबंधित इंस्टॉलेशन की पहचान के लिए ज़रूरी जानकारी माँग सकते हैं।</p>
 
     <h2>Face ID और डिवाइस प्रमाणीकरण</h2>
     <p>Face ID या डिवाइस प्रमाणीकरण के उपयोग पर, बायोमेट्रिक मिलान उपयोगकर्ता के डिवाइस पर iOS ही करता है। Focusidea, Face ID का बायोमेट्रिक डेटा न पाता है, न रखता है, न भेजता है।</p>
@@ -352,11 +379,11 @@
     <p>वाक् पहचान के लिए Apple का Speech फ़्रेमवर्क इस्तेमाल होता है। iOS और आपके डिवाइस के अनुसार पहचान डिवाइस पर ही चल सकती है या Apple की वाक्-पहचान सेवा का उपयोग कर सकती है। जब दोनों विफल हो जाएं, तो अंतिम उपाय के रूप में ऐप डेवलपर द्वारा संचालित एक निजी वाक्-पहचान सर्वर को ऑडियो भेज सकता है; यह सर्वर केवल डेवलपर के अपने निजी नेटवर्क से ही पहुंच योग्य है और अन्य उपयोगकर्ता इसे एक्सेस नहीं कर सकते। इस सीमित उपाय को छोड़कर, Focusidea आपकी आवाज़ की रिकॉर्डिंग किसी भी Focusidea सर्वर पर अपलोड नहीं करता। Meeting/Lecture की ऑडियो आपके डिवाइस पर ही रिकॉर्ड और संचित होती है; इन रिकॉर्डिंग को आप ऐप में मिटा सकते हैं। अगर Companion के बोले जाने वाले जवाबों के लिए कोई वैकल्पिक क्लाउड आवाज़ इस्तेमाल हो, तो उस आवाज़ सेवा को केवल बोला जाने वाला पाठ भेजा जाता है — आपकी आवाज़ की रिकॉर्डिंग कभी नहीं।</p>
 
     <h2>ट्रैकिंग और विज्ञापन</h2>
-    <p>Focusidea तीसरे पक्ष का विज्ञापन इस्तेमाल नहीं करता, और विज्ञापन के लिए ऐप या साइट के आर-पार ट्रैकिंग नहीं करता।</p>
+    <p>Focusidea तीसरे पक्ष का विज्ञापन इस्तेमाल नहीं करता, और विज्ञापन के लिए ऐप या साइट के आर-पार ट्रैकिंग नहीं करता। वैकल्पिक सीखने का विश्लेषण विज्ञापन या ऐप/साइट के आर-पार ट्रैकिंग के लिए इस्तेमाल नहीं होता।</p>
 
     <h2>डेटा का संचय और प्रतिधारण</h2>
     <p>Focusidea इस तरह बना है कि निजी रिकॉर्ड डिवाइस पर और Calendar Holder के लिंक के ज़रिए व्यवस्थित रहें — जब तक उपयोगकर्ता निर्यात, साझा करना, या हमारे गेटवे से संसाधित होने वाली कोई AI सुविधा न चुने।</p>
-    <p>ऐप का स्थानीय डेटा डिवाइस पर तब तक रहता है जब तक उसे ऐप के भीतर उपलब्ध नियंत्रणों से हटाया न जाए, उपयोगकर्ता उसे निर्यात करके मिटा न दे, या ऐप हटा न दिया जाए। हमारे गेटवे से भेजे गए अनुरोध वह संचित नहीं करता (देखें “AI प्रसंस्करण और हमारा गेटवे”)।</p>
+    <p>ऐप का स्थानीय डेटा डिवाइस पर तब तक रहता है जब तक उसे ऐप के भीतर उपलब्ध नियंत्रणों से हटाया न जाए, उपयोगकर्ता उसे निर्यात करके मिटा न दे, या ऐप हटा न दिया जाए। हमारे गेटवे से भेजे गए अनुरोध वह संचित नहीं करता (देखें “AI प्रसंस्करण और हमारा गेटवे”)। वैकल्पिक सीखने के विश्लेषण का डेटा अधिकतम 12 महीने रखा जाता है (देखें “सीखने की समझ का विश्लेषण (वैकल्पिक)”)।</p>
     <p>प्रोफ़ाइल जैसे डिवाइस पर चुने हुए महत्वपूर्ण रिकॉर्ड के लिए, Focusidea Safe Record Guard सहेजते समय SHA-256 फ़िंगरप्रिंट बनाता है, स्थानीय पुनर्प्राप्ति स्नैपशॉट रख सकता है, और पढ़ते समय अखंडता जाँचता है। फ़िंगरप्रिंट न मिले, तो Focusidea सम्भावित बिगाड़ या छेड़छाड़ पहचान सकता है और संदिग्ध डेटा अलग रख सकता है। यह प्रक्रिया डिवाइस पर ही होती है और विज्ञापन ट्रैकिंग या बाहरी विश्लेषण भेजने के लिए नहीं बनी है। यह न एंटीवायरस सुरक्षा है, न अनधिकृत पहुँच की पूरी रोक, न पहचान सत्यापन, न एन्क्रिप्शन की गारंटी, न चिकित्सा सुरक्षा की गारंटी।</p>
 
     <h2>Companion (चुनने योग्य रूप) बदल सकते हैं</h2>
@@ -366,7 +393,7 @@
     <p>Focusidea निजी डेटा नहीं बेचता। Focusidea जानकारी केवल तब साझा करता है जब उपयोगकर्ता द्वारा चुनी गई सुविधा देने के लिए ज़रूरी हो, जब उपयोगकर्ता स्पष्ट रूप से निर्यात या साझा करना चुने, जब क़ानून की माँग हो, या जब सुरक्षा की रक्षा के लिए आवश्यक हो।</p>
 
     <h2>बच्चे और किशोर उपयोगकर्ता</h2>
-    <p>Focusidea, Kids Category ऐप के रूप में नहीं बना है। कम उम्र के उपयोगकर्ता Focusidea इस्तेमाल करें, तो माता-पिता या अभिभावक को निगरानी रखनी चाहिए — ख़ासकर उन सुविधाओं पर जिनमें निजी रिकॉर्ड, सेहत से जुड़े नोट, AI से बनी सामग्री या ख़रीद शामिल हो।</p>
+    <p>Focusidea, Kids Category ऐप के रूप में नहीं बना है। कम उम्र के उपयोगकर्ता Focusidea इस्तेमाल करें, तो माता-पिता या अभिभावक को निगरानी रखनी चाहिए — ख़ासकर उन सुविधाओं पर जिनमें निजी रिकॉर्ड, सेहत से जुड़े नोट, AI से बनी सामग्री या ख़रीद शामिल हो। वैकल्पिक सीखने का विश्लेषण 18 वर्ष से कम आयु के उपयोगकर्ताओं के लिए केवल माता-पिता/अभिभावक की सहमति से भेजा जाता है, जिसे किसी भी समय वापस लिया जा सकता है।</p>
 
     <h2>उपयोगकर्ता के विकल्प</h2>
     <p>उपयोगकर्ता iOS की अनुमतियाँ Settings ऐप में संभाल सकते हैं। कैमरा, तस्वीरें, वाक्, माइक्रोफ़ोन, स्थान और सूचनाएँ इस्तेमाल करनी हैं या नहीं, यह वे चुन सकते हैं। AI सुविधाएँ किसी कंपनी के खाते या कुंजी के बिना काम करती हैं।</p>
@@ -386,7 +413,7 @@
   <!-- ============================ FRANÇAIS ============================ -->
   <section class="lang lang-fr" lang="fr">
     <h1>Politique de confidentialité de Focusidea</h1>
-    <p class="updated">Dernière mise à jour : 29 septembre 2026</p>
+    <p class="updated">Dernière mise à jour : 1 octobre 2026</p>
 
     <p>Focusidea est une application d'assistance personnelle intelligente à vocation mondiale, conçue pour iPhone. Elle est destinée à organiser les enregistrements quotidiens, les conversations et échanges avec l'AICompanion, les rendez-vous, les photos, les comptes rendus de réunions/cours (Meeting/Lecture), le suivi des repas et de l'exercice, les informations de référence pour la prévision de poids, ainsi que tout enregistrement personnel facultatif lié à la santé.</p>
     <p>Focusidea n'est pas un dispositif médical. Focusidea ne fournit ni diagnostic, ni décision thérapeutique, ni prescription, ni indication de posologie, ni décision d'urgence, ni acte médical. Les fonctions liées à la santé visent uniquement à faciliter l'enregistrement personnel, la compréhension de soi et la préparation à la consultation d'un professionnel de santé. Avant toute décision médicale, veuillez impérativement consulter un professionnel de santé qualifié (médecin, pharmacien, infirmier, etc.).</p>
@@ -415,6 +442,7 @@
       <li>Aider l'utilisateur à s'intéresser à ses propres enregistrements et à participer plus facilement, en tant que membre de l'équipe soignante, aux consultations et échanges.</li>
       <li>Lorsque l'utilisateur choisit la fonction de prévision de poids, estimer à titre indicatif la tendance de poids à 30 jours à partir de trois jours consécutifs d'enregistrements alimentaires et d'exercice.</li>
       <li>Lorsqu'elle est activée, utiliser les données pour la vérification de la stabilité de l'application et les diagnostics internes.</li>
+      <li>Lorsque l'utilisateur (ou, s'il a moins de 18 ans, son parent ou tuteur) y a consenti, évaluer si les cours aident les utilisateurs à comprendre la matière (voir « Analyse de l'apprentissage (facultative) »).</li>
     </ul>
 
     <h2>Traitement par IA et notre passerelle</h2>
@@ -422,10 +450,18 @@
     <p>Sur iPhone 15 Pro et modèles ultérieurs avec Apple Intelligence activé, les réponses du Companion sont générées par le modèle de fondation embarqué d'Apple. Rien ne sort de l'appareil dans ce cas.</p>
     <p>Sur les autres appareils compatibles, les requêtes sont envoyées à notre passerelle, que nous exploitons, et qui effectue le traitement. Cela concerne les conversations avec le Companion, la création d'images du Companion et la restauration de portraits commémoratifs, ainsi que la génération de résumés et de questions d'apprentissage.</p>
     <p><strong>Ce qui est transmis :</strong> le contenu du message, ainsi qu'un identifiant d'installation anonyme utilisé uniquement pour appliquer une limite d'utilisation par appareil. S'y ajoutent, dans la mesure nécessaire à la consultation concernée, les propres enregistrements de l'utilisateur — par exemple, pour une consultation de santé, des valeurs d'analyses ou des noms de médicaments ; pour une consultation liée au carnet de santé mère-enfant, l'âge en mois, la taille, le poids ou le statut vaccinal de l'enfant. Le nom, les coordonnées et la localisation précise ne sont jamais transmis. Les enregistrements eux-mêmes restent sur l'appareil ; seule la partie nécessaire à la consultation est envoyée.</p>
-    <p><strong>Ce qui est conservé :</strong> rien. La passerelle ne conserve ni le contenu des conversations ni les images générées. Seuls l'identifiant de la requête et le code de statut restent dans les journaux.</p>
+    <p><strong>Ce qui est conservé :</strong> rien. La passerelle ne conserve ni le contenu des conversations ni les images générées. Seuls l'identifiant de la requête et le code de statut restent dans les journaux. Cela concerne les requêtes d'IA ; l'analyse de l'apprentissage, facultative, est distincte et décrite ci-dessous dans « Analyse de l'apprentissage (facultative) ».</p>
     <p>Les enregistrements personnels, la mémoire et les données de développement du Companion de l'utilisateur restent sur l'appareil.</p>
     <p>Les fournisseurs de modèles actuellement utilisés derrière la passerelle sont Groq (conversation) et Google Gemini (création d'images du Companion, restauration de portraits commémoratifs — la génération d'image ne fonctionne que lorsque l'utilisateur crée ou ajuste un Companion). Nous pouvons changer ou ajouter des fournisseurs de modèles derrière la passerelle sans modifier l'application. Les caractéristiques décrites ci-dessus relèvent de l'application elle-même et ne sont pas affectées par un tel changement.</p>
     <p>La facturation se limite à l'abonnement mensuel de Focusidea. L'utilisateur n'ayant de contrat avec aucun fournisseur d'IA, aucune facturation de leur part n'est possible.</p>
+
+    <h2>Analyse de l'apprentissage (facultative)</h2>
+    <p><strong>Finalité :</strong> déterminer si les cours aident les utilisateurs à comprendre la matière. Ces données ne servent pas à la publicité, ne sont pas vendues et ne sont pas partagées avec des tiers.</p>
+    <p><strong>Ce qui est transmis :</strong> un identifiant d'installation anonyme, ainsi que des informations sur l'utilisation des cours et la compréhension (par exemple les cours utilisés, quand et pendant combien de temps, et des résultats indiquant la compréhension). Cela n'inclut ni votre nom, ni votre adresse e-mail, ni vos coordonnées, ni votre localisation, ni le texte des conversations, ni les photos, ni les données de santé.</p>
+    <p><strong>Consentement :</strong> ces données ne sont transmises qu'avec l'accord de l'utilisateur ou, s'il a moins de 18 ans, de son parent ou tuteur. Focusidea fonctionne sans cet accord, qui peut être retiré à tout moment.</p>
+    <p><strong>Où elles sont stockées :</strong> sur un serveur privé que nous exploitons. Elles sont transmises par une connexion chiffrée (HTTPS) avec un jeton d'authentification, et nous ne les stockons dans aucun service d'analyse tiers.</p>
+    <p><strong>Durée de conservation :</strong> 12 mois au maximum à compter de la collecte, puis suppression.</p>
+    <p><strong>Demande de suppression :</strong> l'utilisateur, ou son parent ou tuteur, peut demander la suppression de ces données en écrivant à l'adresse indiquée dans « Contact ». Les données étant liées à un identifiant anonyme et non à un nom, nous pouvons demander les informations nécessaires pour identifier l'installation.</p>
 
     <h2>Face ID et authentification de l'appareil</h2>
     <p>Lorsque Face ID ou l'authentification de l'appareil est utilisé, le traitement d'authentification est effectué par iOS sur l'appareil de l'utilisateur. Focusidea ne reçoit, ne conserve ni ne transmet aucune donnée biométrique Face ID.</p>
@@ -457,11 +493,11 @@
     <p>La reconnaissance vocale utilise le framework Speech d'Apple. Selon l'iOS et l'appareil, la reconnaissance peut s'effectuer sur l'appareil ou via le service de reconnaissance vocale d'Apple. En dernier recours, si ces deux méthodes échouent, l'audio peut être envoyé à un serveur privé de reconnaissance vocale exploité par le développeur. Ce serveur n'est accessible que depuis le réseau privé du développeur lui-même, et aucun autre utilisateur ne peut y accéder. En dehors de ce cas limité, Focusidea ne téléverse jamais les enregistrements vocaux de l'utilisateur vers les serveurs de Focusidea. L'audio des réunions/cours est enregistré et conservé sur l'appareil, et peut être supprimé dans l'application. Lorsqu'une voix cloud facultative est utilisée pour la lecture vocale du Companion, seul le texte à lire est transmis ; l'enregistrement vocal de l'utilisateur lui-même n'est jamais transmis.</p>
 
     <h2>Suivi et publicité</h2>
-    <p>Focusidea n'utilise aucune publicité tierce et n'effectue aucun suivi inter-applications ou inter-sites à des fins publicitaires.</p>
+    <p>Focusidea n'utilise aucune publicité tierce et n'effectue aucun suivi inter-applications ou inter-sites à des fins publicitaires. L'analyse de l'apprentissage, facultative, n'est utilisée ni pour la publicité ni pour un suivi inter-applications ou inter-sites.</p>
 
     <h2>Conservation et stockage des données</h2>
     <p>Sauf si l'utilisateur choisit l'exportation, le partage, ou une fonction d'IA passant par notre passerelle, Focusidea est conçu pour organiser les enregistrements personnels sur l'appareil, avec des liens vers le dossier calendrier.</p>
-    <p>Les données enregistrées dans l'application restent sur l'appareil jusqu'à leur suppression via les opérations de suppression disponibles dans l'application, leur suppression par l'utilisateur après exportation, ou la désinstallation de l'application. Les requêtes envoyées à la passerelle n'y sont pas conservées (voir « Traitement par IA et notre passerelle »).</p>
+    <p>Les données enregistrées dans l'application restent sur l'appareil jusqu'à leur suppression via les opérations de suppression disponibles dans l'application, leur suppression par l'utilisateur après exportation, ou la désinstallation de l'application. Les requêtes envoyées à la passerelle n'y sont pas conservées (voir « Traitement par IA et notre passerelle »). Les données de l'analyse de l'apprentissage, facultative, sont conservées 12 mois au maximum (voir « Analyse de l'apprentissage (facultative) »).</p>
     <p>Pour certains enregistrements importants sur l'appareil, tels que le profil, Focusidea Safe Record Guard effectue une empreinte SHA-256 au moment de l'enregistrement, conserve un instantané local de récupération et vérifie l'intégrité lors du chargement. En cas de non-correspondance de l'empreinte, les données sont détectées comme potentiellement corrompues ou altérées, ce qui permet de les isoler. Ce traitement s'effectue sur l'appareil et n'a pas pour but un suivi publicitaire ni une transmission à des fins d'analyse externe. Il ne constitue pas non plus une protection antivirus, une prévention complète des accès non autorisés, une vérification d'identité, une garantie de chiffrement ni une garantie de sécurité médicale.</p>
 
     <h2>Ajout et suppression de Companions (apparences sélectionnables)</h2>
@@ -471,7 +507,7 @@
     <p>Focusidea ne vend aucune donnée personnelle. Le partage d'informations n'a lieu que si nécessaire pour fournir une fonction choisie par l'utilisateur, si l'utilisateur choisit explicitement d'exporter ou de partager, si la loi l'exige, ou si cela est nécessaire à des fins de sécurité ou de protection.</p>
 
     <h2>Enfants et jeunes utilisateurs</h2>
-    <p>Focusidea n'est pas conçue comme une application destinée à la catégorie Enfants. Si un jeune utilisateur l'utilise, cela doit se faire sous la supervision d'un parent ou tuteur, en particulier pour les enregistrements personnels, les notes liées à la santé, le contenu généré par l'IA, et les fonctions impliquant un achat.</p>
+    <p>Focusidea n'est pas conçue comme une application destinée à la catégorie Enfants. Si un jeune utilisateur l'utilise, cela doit se faire sous la supervision d'un parent ou tuteur, en particulier pour les enregistrements personnels, les notes liées à la santé, le contenu généré par l'IA, et les fonctions impliquant un achat. L'analyse de l'apprentissage, facultative, n'est transmise pour les moins de 18 ans qu'avec le consentement d'un parent ou tuteur, qui peut être retiré à tout moment.</p>
 
     <h2>Choix de l'utilisateur</h2>
     <p>L'utilisateur peut gérer les autorisations depuis l'application Réglages d'iOS. L'utilisation de l'appareil photo, des photos, de l'audio, du microphone, de la localisation et des notifications reste au choix de l'utilisateur. Les fonctions d'IA fonctionnent sans compte ni clé auprès d'un fournisseur.</p>
@@ -491,7 +527,7 @@
   <!-- ============================ DEUTSCH ============================ -->
   <section class="lang lang-de" lang="de">
     <h1>Datenschutzerklärung von Focusidea</h1>
-    <p class="updated">Zuletzt aktualisiert: 29. September 2026</p>
+    <p class="updated">Zuletzt aktualisiert: 1. Oktober 2026</p>
 
     <p>Focusidea ist eine weltweit einsetzbare, intelligente persönliche Assistenz-App für iPhone. Sie dient der Organisation von täglichen Aufzeichnungen, Gesprächen und Interaktionen mit dem AICompanion, Terminen, Fotos, Meeting-/Lecture-Aufzeichnungen, Ernährungs- und Bewegungsprotokollen, Referenzinformationen zur Gewichtsprognose sowie optionalen persönlichen gesundheitsbezogenen Aufzeichnungen.</p>
     <p>Focusidea ist kein Medizinprodukt. Focusidea stellt keine Diagnose, keine Therapieentscheidung, keine Verschreibung, keine Dosierungsanweisung, keine Notfallentscheidung und keine medizinische Behandlung bereit. Die gesundheitsbezogenen Funktionen dienen ausschließlich der persönlichen Aufzeichnung, dem Selbstverständnis und der Vorbereitung auf ein Gespräch mit medizinischem Fachpersonal. Konsultieren Sie vor jeder medizinischen Entscheidung unbedingt qualifiziertes medizinisches Fachpersonal wie Ärztinnen und Ärzte, Apothekerinnen und Apotheker oder Pflegefachpersonen.</p>
@@ -520,6 +556,7 @@
       <li>Unterstützung dabei, dass Nutzerinnen und Nutzer sich für ihre eigenen Aufzeichnungen interessieren und leichter als Teil des Behandlungsteams an Gesprächen und am Austausch teilnehmen können.</li>
       <li>Bei Nutzung der Gewichtsprognosefunktion: näherungsweise Schätzung des Gewichtstrends nach 30 Tagen anhand von drei aufeinanderfolgenden Tagen mit Ernährungs- und Bewegungsaufzeichnungen.</li>
       <li>Sofern aktiviert: Nutzung zur Überprüfung der App-Stabilität und für interne Diagnosen.</li>
+      <li>Sofern die Nutzerin bzw. der Nutzer (bei unter 18-Jährigen: die Eltern bzw. Erziehungsberechtigten) zugestimmt hat: Beurteilung, ob die Lerneinheiten beim Verständnis des Stoffes helfen (siehe „Lernanalyse (optional)").</li>
     </ul>
 
     <h2>KI-Verarbeitung und unser Gateway</h2>
@@ -527,10 +564,18 @@
     <p>Auf iPhone 15 Pro und neueren Modellen mit aktiviertem Apple Intelligence werden die Antworten des Companion durch das On-Device-Basismodell von Apple erzeugt. In diesem Fall verlässt nichts das Gerät.</p>
     <p>Auf anderen unterstützten Geräten werden Anfragen an unser betriebenes Gateway gesendet, das die Verarbeitung übernimmt. Dies betrifft Gespräche mit dem Companion, die Erstellung von Companion-Bildern und die Wiederherstellung von Gedenkporträts sowie die Erstellung von Zusammenfassungen und Lernfragen.</p>
     <p><strong>Was übermittelt wird:</strong> der Nachrichtentext sowie eine anonyme, geräteweise Installationskennung, die ausschließlich zur Durchsetzung eines Nutzungslimits pro Gerät verwendet wird. Zusätzlich werden, soweit für die jeweilige Anfrage erforderlich, eigene Aufzeichnungen der Nutzerin bzw. des Nutzers einbezogen – etwa bei einer Gesundheitsanfrage Laborwerte oder Medikamentennamen, bei einer Anfrage zum Mutter-Kind-Gesundheitsheft das Alter in Monaten, Größe, Gewicht oder Impfstatus des Kindes. Name, Kontaktinformationen und genauer Standort werden nicht übermittelt. Die Aufzeichnungen selbst verbleiben auf dem Gerät; nur der für die jeweilige Anfrage erforderliche Teil wird gesendet.</p>
-    <p><strong>Was gespeichert wird:</strong> nichts. Das Gateway speichert weder den Gesprächstext noch erzeugte Bilder. In den Protokollen verbleiben lediglich die Anfragekennung und der Statuscode.</p>
+    <p><strong>Was gespeichert wird:</strong> nichts. Das Gateway speichert weder den Gesprächstext noch erzeugte Bilder. In den Protokollen verbleiben lediglich die Anfragekennung und der Statuscode. Dies betrifft KI-Anfragen; die optionale Lernanalyse ist davon getrennt und weiter unten unter „Lernanalyse (optional)" beschrieben.</p>
     <p>Persönliche Aufzeichnungen, Erinnerungen und Entwicklungsdaten des Companion der Nutzerin bzw. des Nutzers verbleiben auf dem Gerät.</p>
     <p>Die derzeit hinter dem Gateway genutzten Modellanbieter sind Groq (Gespräche) und Google Gemini (Erstellung von Companion-Bildern, Wiederherstellung von Gedenkporträts – die Bilderzeugung funktioniert nur, wenn Nutzerinnen und Nutzer einen Companion erstellen oder anpassen). Wir können die Modellanbieter hinter dem Gateway ändern oder ergänzen, ohne die App selbst zu ändern. Die oben beschriebenen Eigenschaften sind Eigenschaften der App selbst und werden durch eine solche Änderung nicht berührt.</p>
     <p>Die Abrechnung erfolgt ausschließlich über das monatliche Focusidea-Abonnement. Da Nutzerinnen und Nutzer mit keinem KI-Anbieter einen Vertrag haben, ist eine Abrechnung durch diesen nicht möglich.</p>
+
+    <h2>Lernanalyse (optional)</h2>
+    <p><strong>Zweck:</strong> Beurteilung, ob die Lerneinheiten beim Verständnis des Stoffes helfen. Die Daten werden nicht für Werbung verwendet, nicht verkauft und nicht an Dritte weitergegeben.</p>
+    <p><strong>Was übermittelt wird:</strong> eine anonyme Installationskennung sowie Angaben zur Nutzung der Lerneinheiten und zum Verständnis (zum Beispiel welche Lerneinheiten genutzt wurden, wann und wie lange, sowie Ergebnisse, die das Verständnis anzeigen). Name, E-Mail-Adresse, Kontaktdaten, Standort, Gesprächstext, Fotos und Gesundheitsaufzeichnungen sind darin nicht enthalten.</p>
+    <p><strong>Einwilligung:</strong> Die Übermittlung erfolgt nur mit Zustimmung der Nutzerin bzw. des Nutzers oder, bei unter 18-Jährigen, der Eltern bzw. Erziehungsberechtigten. Focusidea funktioniert auch ohne diese Zustimmung; sie kann jederzeit widerrufen werden.</p>
+    <p><strong>Wo die Daten gespeichert werden:</strong> auf einem von uns betriebenen privaten Server. Die Übertragung erfolgt über eine verschlüsselte Verbindung (HTTPS) mit einem Authentifizierungstoken; bei einem Analysedienst eines Drittanbieters speichern wir sie nicht.</p>
+    <p><strong>Aufbewahrungsdauer:</strong> höchstens 12 Monate ab Erhebung, danach werden die Daten gelöscht.</p>
+    <p><strong>Löschanfragen:</strong> Nutzerinnen und Nutzer oder deren Eltern bzw. Erziehungsberechtigte können die Löschung dieser Daten per E-Mail an die unter „Kontakt" genannte Adresse verlangen. Da die Daten an eine anonyme Kennung und nicht an einen Namen geknüpft sind, können wir Angaben zur Identifizierung der Installation erfragen.</p>
 
     <h2>Face ID und Geräteauthentifizierung</h2>
     <p>Bei Nutzung von Face ID oder der Geräteauthentifizierung wird der Authentifizierungsvorgang durch iOS auf dem Gerät der Nutzerin bzw. des Nutzers durchgeführt. Focusidea erhält, speichert und übermittelt keine biometrischen Face-ID-Daten.</p>
@@ -562,11 +607,11 @@
     <p>Für die Spracherkennung wird das Speech-Framework von Apple verwendet. Je nach iOS-Version und Gerät erfolgt die Erkennung entweder auf dem Gerät selbst oder über den Spracherkennungsdienst von Apple. Nur als letztes Mittel, falls beide Verfahren fehlschlagen, kann Audio an einen privaten, vom Entwickler betriebenen Spracherkennungsserver gesendet werden. Dieser Server ist ausschließlich über das private Netzwerk des Entwicklers selbst erreichbar; andere Nutzerinnen und Nutzer können ihn nicht erreichen. Außerhalb dieses eng begrenzten Falls lädt Focusidea Sprachaufnahmen von Nutzerinnen und Nutzern niemals auf Focusidea-Server hoch. Audio von Meetings/Lectures wird auf dem Gerät aufgenommen und gespeichert und kann in der App gelöscht werden. Wird für die Sprachausgabe des Companion eine optionale Cloud-Stimme verwendet, wird ausschließlich der vorzulesende Text übermittelt; die eigentliche Sprachaufnahme der Nutzerin bzw. des Nutzers wird nicht übermittelt.</p>
 
     <h2>Tracking und Werbung</h2>
-    <p>Focusidea verwendet keine Werbung von Drittanbietern und führt kein app- oder websiteübergreifendes Tracking zu Werbezwecken durch.</p>
+    <p>Focusidea verwendet keine Werbung von Drittanbietern und führt kein app- oder websiteübergreifendes Tracking zu Werbezwecken durch. Die optionale Lernanalyse wird weder für Werbung noch für app- oder websiteübergreifendes Tracking verwendet.</p>
 
     <h2>Datenspeicherung und Aufbewahrung</h2>
     <p>Sofern Nutzerinnen und Nutzer nicht Export, Freigabe oder eine über unser Gateway laufende KI-Funktion wählen, ist Focusidea so konzipiert, dass persönliche Aufzeichnungen auf dem Gerät und über Verknüpfungen im Kalenderordner organisiert werden.</p>
-    <p>In der App gespeicherte Daten verbleiben auf dem Gerät, bis sie über die in der App verfügbaren Löschfunktionen, durch Löschung nach einem Export durch Nutzerinnen und Nutzer oder durch Deinstallation der App entfernt werden. An das Gateway gesendete Anfragen werden dort nicht gespeichert (siehe „KI-Verarbeitung und unser Gateway").</p>
+    <p>In der App gespeicherte Daten verbleiben auf dem Gerät, bis sie über die in der App verfügbaren Löschfunktionen, durch Löschung nach einem Export durch Nutzerinnen und Nutzer oder durch Deinstallation der App entfernt werden. An das Gateway gesendete Anfragen werden dort nicht gespeichert (siehe „KI-Verarbeitung und unser Gateway"). Daten der optionalen Lernanalyse werden höchstens 12 Monate aufbewahrt (siehe „Lernanalyse (optional)").</p>
     <p>Für bestimmte wichtige lokale Aufzeichnungen wie das Profil führt Focusidea Safe Record Guard beim Speichern einen SHA-256-Fingerabdruck, ein lokales Wiederherstellungs-Snapshot sowie beim Laden eine Integritätsprüfung durch. Stimmt der Fingerabdruck nicht überein, werden die Daten als möglicherweise beschädigt oder manipuliert erkannt, sodass verdächtige Daten isoliert werden können. Dieser Vorgang erfolgt auf dem Gerät und dient nicht dem Werbe-Tracking oder der Übermittlung zu externen Analysezwecken. Er stellt außerdem keinen Virenschutz, keinen vollständigen Schutz vor unbefugtem Zugriff, keine Identitätsprüfung, keine Verschlüsselungsgarantie und keine medizinische Sicherheitsgarantie dar.</p>
 
     <h2>Hinzufügen und Entfernen von Companions (wählbare Erscheinungsbilder)</h2>
@@ -576,7 +621,7 @@
     <p>Focusidea verkauft keine personenbezogenen Daten. Eine Weitergabe von Informationen erfolgt nur, wenn dies zur Bereitstellung einer von Nutzerinnen und Nutzern gewählten Funktion erforderlich ist, wenn Nutzerinnen und Nutzer ausdrücklich Export oder Freigabe wählen, wenn dies gesetzlich vorgeschrieben ist, oder wenn dies zum Schutz der Sicherheit erforderlich ist.</p>
 
     <h2>Kinder und junge Nutzerinnen und Nutzer</h2>
-    <p>Focusidea ist nicht als App für die Kategorie „Kinder" konzipiert. Sollten junge Nutzerinnen und Nutzer die App verwenden, sollte dies unter elterlicher Aufsicht erfolgen, insbesondere im Hinblick auf persönliche Aufzeichnungen, gesundheitsbezogene Notizen, von KI erzeugte Inhalte sowie Funktionen mit Kaufoption.</p>
+    <p>Focusidea ist nicht als App für die Kategorie „Kinder" konzipiert. Sollten junge Nutzerinnen und Nutzer die App verwenden, sollte dies unter elterlicher Aufsicht erfolgen, insbesondere im Hinblick auf persönliche Aufzeichnungen, gesundheitsbezogene Notizen, von KI erzeugte Inhalte sowie Funktionen mit Kaufoption. Die optionale Lernanalyse wird bei unter 18-Jährigen nur mit Zustimmung der Eltern bzw. Erziehungsberechtigten übermittelt; diese kann jederzeit widerrufen werden.</p>
 
     <h2>Wahlmöglichkeiten für Nutzerinnen und Nutzer</h2>
     <p>Nutzerinnen und Nutzer können Berechtigungen über die iOS-Einstellungen-App verwalten. Die Nutzung von Kamera, Fotos, Audio, Mikrofon, Standort und Benachrichtigungen liegt in der Wahl der Nutzerin bzw. des Nutzers. KI-Funktionen funktionieren ohne Konto oder Schlüssel bei einem Anbieter.</p>

@@ -77,8 +77,10 @@ final class SubscriptionStore: ObservableObject {
         isSubscribed = active
     }
 
-    func purchase() async {
-        guard case .ready(let product) = loadState, !isWorking else { return }
+    /// 購入成功(または既に有効)なら true。
+    @discardableResult
+    func purchase() async -> Bool {
+        guard case .ready(let product) = loadState, !isWorking else { return false }
         isWorking = true; message = nil
         defer { isWorking = false }
         do {
@@ -86,19 +88,23 @@ final class SubscriptionStore: ObservableObject {
             case .success(let v):
                 if case .verified(let t) = v { await t.finish(); await refreshEntitlement() }
                 else { message = "購入を確認できませんでした。もう一度お試しください。" }
+                return isSubscribed
             case .userCancelled: break
             case .pending: message = "購入は承認待ちです(保護者の承認など)。承認後に自動で有効になります。"
             @unknown default: message = "不明な結果です。もう一度お試しください。"
             }
         } catch { message = "購入に失敗しました: \(error.localizedDescription)" }
+        return isSubscribed
     }
 
-    func restore() async {
+    @discardableResult
+    func restore() async -> Bool {
         isWorking = true; message = nil
         defer { isWorking = false }
-        do { try await AppStore.sync() } catch { message = "復元に失敗しました: \(error.localizedDescription)"; return }
+        do { try await AppStore.sync() } catch { message = "復元に失敗しました: \(error.localizedDescription)"; return false }
         await refreshEntitlement()
         if !isSubscribed { message = "復元できる購入が見つかりませんでした。" }
+        return isSubscribed
     }
 }
 
@@ -110,6 +116,14 @@ struct PaywallView: View {
     var onSelect: (PaywallDestination) -> Void   // 試用中の行き先選択、または購入成功時に呼ばれる
     @Environment(\.openURL) private var openURL
     @State private var showDestinationDialog = false
+    @State private var navigated = false
+
+    /// 加入成立 → MainBoard へ。二重遷移を防ぐ。
+    private func goMainBoard() {
+        guard !navigated else { return }
+        navigated = true
+        onSelect(.mainBoard)
+    }
 
     private var price: String {
         if case .ready(let p) = store.loadState { return p.displayPrice }
@@ -138,7 +152,7 @@ struct PaywallView: View {
                     Text(m).font(.footnote).foregroundStyle(.red).multilineTextAlignment(.center)
                 }
 
-                Button("購入を復元") { Task { await store.restore() } }.disabled(store.isWorking)
+                Button("購入を復元") { Task { if await store.restore() { goMainBoard() } } }.disabled(store.isWorking)
                 // 期間終了後は全機能が使えない仕様。進める導線は購入/復元のみ(画面はこのまま)。
                 if TrialManager.isActive {
                     Button("お試しを続ける") { showDestinationDialog = true }
@@ -161,7 +175,7 @@ struct PaywallView: View {
             Button("TrialCompanion 選択へ") { onSelect(.trialCompanion) }
             Button("キャンセル", role: .cancel) {}
         }
-        .onChange(of: store.isSubscribed) { if $0 { onSelect(.mainBoard) } }   // 購入成功→MainBoardへ
+        .onChange(of: store.isSubscribed) { if $0 { goMainBoard() } }   // 承認待ち(Ask to Buy)後の有効化にも対応
     }
 
     @ViewBuilder private var content: some View {
@@ -174,7 +188,7 @@ struct PaywallView: View {
             }
         case .ready:
             Button {
-                Task { await store.purchase() }
+                Task { if await store.purchase() { goMainBoard() } }
             } label: {
                 HStack { if store.isWorking { ProgressView().tint(.white) }
                          Text(TrialManager.isActive ? "月額プランに加入する" : "継続する").bold() }

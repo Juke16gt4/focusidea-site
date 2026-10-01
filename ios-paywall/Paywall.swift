@@ -46,6 +46,7 @@ final class SubscriptionStore: ObservableObject {
     @Published var message: String?          // ユーザーに見せる結果メッセージ
     private var updates: Task<Void, Never>?
 
+    /// 全機能のゲート。false の間はペイウォール以外に進めない(期間終了後・未加入)。
     var hasAccess: Bool { isSubscribed || TrialManager.isActive }
 
     init() {
@@ -106,7 +107,7 @@ enum PaywallDestination { case mainBoard, trialCompanion }
 
 struct PaywallView: View {
     @ObservedObject var store: SubscriptionStore
-    var onSelect: (PaywallDestination) -> Void   // 行き先を選んだら呼ばれる(行き止まりにしない)
+    var onSelect: (PaywallDestination) -> Void   // 試用中の行き先選択、または購入成功時に呼ばれる
     @Environment(\.openURL) private var openURL
     @State private var showDestinationDialog = false
 
@@ -138,8 +139,14 @@ struct PaywallView: View {
                 }
 
                 Button("購入を復元") { Task { await store.restore() } }.disabled(store.isWorking)
-                Button(TrialManager.isActive ? "お試しを続ける" : "無料機能のみ利用") { showDestinationDialog = true }
-                    .foregroundStyle(.secondary)
+                // 期間終了後は全機能が使えない仕様。進める導線は購入/復元のみ(画面はこのまま)。
+                if TrialManager.isActive {
+                    Button("お試しを続ける") { showDestinationDialog = true }
+                        .foregroundStyle(.secondary)
+                } else {
+                    Text("お試し期間の終了後は、月額プランへの加入が必要です。")
+                        .font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
+                }
 
                 Text("購入すると、利用規約とプライバシーポリシーに同意したことになります。")
                     .font(.caption).foregroundStyle(.secondary).multilineTextAlignment(.center)
